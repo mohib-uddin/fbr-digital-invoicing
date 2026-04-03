@@ -4,15 +4,15 @@ import RevenueTrendChart from '../components/modules/dashboard/RevenueTrendChart
 export default function DashboardPage() {
   return (
     <>
-      <div className="mx-auto max-w-[1600px] space-y-8 p-8">
-        <section className="font-body flex flex-wrap items-center gap-6 rounded-xl border border-outline-variant/20 bg-surface-container-lowest p-4 shadow-[0_12px_40px_rgba(3,14,68,0.04)]">
+      <div className="mx-auto max-w-[1600px] space-y-6 p-4 md:space-y-8 md:p-8">
+        <section className="font-body flex flex-col gap-4 rounded-xl border border-outline-variant/20 bg-surface-container-lowest p-4 shadow-[0_12px_40px_rgba(3,14,68,0.04)] md:flex-row md:flex-wrap md:items-center md:gap-6">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold uppercase tracking-tighter text-slate-400">Filters:</span>
           </div>
 
-          <div className="flex flex-1 items-center gap-4">
-            <div className="relative">
-              <select className="cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10">
+          <div className="flex w-full flex-1 flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-nowrap lg:items-center">
+            <div className="relative w-full sm:w-auto">
+              <select className="w-full cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10 sm:min-w-[210px]">
                 <option>Date Range: Last 30 Days</option>
                 <option>Date Range: Q3 2023</option>
                 <option>Date Range: Year to Date</option>
@@ -22,8 +22,8 @@ export default function DashboardPage() {
               </span>
             </div>
 
-            <div className="relative">
-              <select className="cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10">
+            <div className="relative w-full sm:w-auto">
+              <select className="w-full cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10 sm:min-w-[210px]">
                 <option>Company: All Entities</option>
                 <option>Sovereign Global Inc.</option>
                 <option>Ledger Tech Ltd.</option>
@@ -33,8 +33,8 @@ export default function DashboardPage() {
               </span>
             </div>
 
-            <div className="relative">
-              <select className="cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10">
+            <div className="relative w-full sm:w-auto">
+              <select className="w-full cursor-pointer appearance-none rounded-lg border border-outline-variant/40 bg-white py-2 pl-4 pr-10 text-sm font-semibold text-primary shadow-sm focus:border-primary/30 focus:ring-2 focus:ring-primary/10 sm:min-w-[220px]">
                 <option>Product Category: All</option>
                 <option>Enterprise SaaS</option>
                 <option>Financial Consulting</option>
@@ -45,7 +45,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <button className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-xs font-bold text-white transition-all hover:opacity-90">
+          <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-2 text-xs font-bold text-white transition-all hover:opacity-90 md:w-auto">
             <span className="material-symbols-outlined text-sm">filter_list</span>
             Apply View
           </button>
@@ -160,8 +160,8 @@ export default function DashboardPage() {
         </section>
 
         <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-8 shadow-[0_12px_40px_rgba(3,14,68,0.04)] lg:col-span-8">
-            <div className="mb-8 flex items-center justify-between">
+          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-5 shadow-[0_12px_40px_rgba(3,14,68,0.04)] md:p-8 lg:col-span-8">
+            <div className="mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="font-headline text-xl font-bold tracking-tight text-primary">Revenue Trend</h2>
                 <p className="mt-1 text-xs text-on-surface-variant">Institutional revenue performance across fiscal periods.</p>
@@ -174,7 +174,7 @@ export default function DashboardPage() {
             <RevenueTrendChart />
           </div>
 
-          <div className="col-span-12 flex flex-col rounded-lg bg-surface-container-lowest p-8 shadow-[0_12px_40px_rgba(3,14,68,0.04)] lg:col-span-4">
+          <div className="col-span-12 flex flex-col rounded-lg bg-surface-container-lowest p-5 shadow-[0_12px_40px_rgba(3,14,68,0.04)] md:p-8 lg:col-span-4">
             <h2 className="font-headline mb-8 text-xl font-bold tracking-tight text-primary">Client Distribution</h2>
             <div className="relative flex flex-1 flex-col items-center justify-center">
               <ClientDistributionChart />
@@ -204,7 +204,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-8 shadow-[0_12px_40px_rgba(3,14,68,0.04)] lg:col-span-6">
+          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-5 shadow-[0_12px_40px_rgba(3,14,68,0.04)] md:p-8 lg:col-span-6">
             <div className="mb-10 flex items-center justify-between">
               <h2 className="font-headline text-xl font-bold tracking-tight text-primary">Product Performance</h2>
               <button className="font-label flex items-center gap-1 text-xs font-bold text-primary hover:underline">
@@ -252,7 +252,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-8 shadow-[0_12px_40px_rgba(3,14,68,0.04)] lg:col-span-6">
+          <div className="col-span-12 rounded-lg bg-surface-container-lowest p-5 shadow-[0_12px_40px_rgba(3,14,68,0.04)] md:p-8 lg:col-span-6">
             <h2 className="font-headline mb-8 text-xl font-bold tracking-tight text-primary">Executive Client Portfolio</h2>
             <div className="overflow-x-auto">
               <table className="w-full border-separate border-spacing-y-3">
@@ -323,7 +323,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <footer className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-slate-100 px-8 py-10 md:flex-row">
+      <footer className="mt-10 flex flex-col items-center justify-between gap-6 border-t border-slate-100 px-4 py-8 md:mt-12 md:flex-row md:px-8 md:py-10">
         <div className="flex items-center gap-3 grayscale opacity-40">
           <div className="flex h-6 w-6 items-center justify-center rounded bg-primary text-[10px] text-white">
             <span className="material-symbols-outlined text-xs">account_balance</span>
@@ -331,7 +331,7 @@ export default function DashboardPage() {
           <p className="text-xs font-bold tracking-tighter text-primary">Sovereign Ledger</p>
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           <a className="text-[10px] font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-primary" href="#">Compliance Engine</a>
           <a className="text-[10px] font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-primary" href="#">Privacy Policy</a>
           <a className="text-[10px] font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-primary" href="#">System Status</a>
