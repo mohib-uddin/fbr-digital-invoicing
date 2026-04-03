@@ -58,7 +58,7 @@ export default function Sidebar() {
       <div className="mt-auto space-y-1 border-t border-slate-200/50 pt-4">
         <NavLink
           className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95"
-          to="/invoices"
+          to="/invoices/create"
         >
           <span className="material-symbols-outlined text-sm">add</span>
           <span className="text-sm">New Invoice</span>
