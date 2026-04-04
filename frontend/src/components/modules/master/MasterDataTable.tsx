@@ -39,11 +39,11 @@ const rows = [
 
 export default function MasterDataTable() {
   return (
-    <section className="px-10 pb-20 font-['Plus Jakarta Sans']">
+    <section className="px-4 pb-24 font-['Plus Jakarta Sans'] md:px-10 md:pb-20">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-fintech-accent/40 bg-surface-container-lowest p-3 shadow-sm">
-        <div className="flex gap-4">
-          <div className="relative">
-            <select className="cursor-pointer appearance-none rounded-lg border-none bg-surface-container-low py-2 pl-4 pr-10 text-xs font-bold text-on-surface-variant focus:ring-0">
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4">
+          <div className="relative w-full sm:w-auto">
+            <select className="w-full cursor-pointer appearance-none rounded-lg border-none bg-surface-container-low py-2 pl-4 pr-10 text-xs font-bold text-on-surface-variant focus:ring-0 sm:min-w-[170px]">
               <option>Tax Category: All</option>
               <option>Exempt</option>
               <option>Standard (18%)</option>
@@ -53,8 +53,8 @@ export default function MasterDataTable() {
             </span>
           </div>
 
-          <div className="relative">
-            <select className="cursor-pointer appearance-none rounded-lg border-none bg-surface-container-low py-2 pl-4 pr-10 text-xs font-bold text-on-surface-variant focus:ring-0">
+          <div className="relative w-full sm:w-auto">
+            <select className="w-full cursor-pointer appearance-none rounded-lg border-none bg-surface-container-low py-2 pl-4 pr-10 text-xs font-bold text-on-surface-variant focus:ring-0 sm:min-w-[140px]">
               <option>UOM: All</option>
               <option>Kilograms</option>
               <option>Units</option>
@@ -70,8 +70,8 @@ export default function MasterDataTable() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-2xl bg-surface-container-lowest shadow-sm">
-        <table className="w-full border-collapse text-left">
+      <div className="overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-sm">
+        <table className="min-w-[820px] w-full border-collapse text-left">
           <thead className="border-b border-outline-variant/10 bg-surface-container-high">
             <tr>
               <th className="px-6 py-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">
@@ -124,7 +124,7 @@ export default function MasterDataTable() {
                 <td className="px-6 py-5 text-right text-xs text-on-surface-variant">{row.updated}</td>
 
                 <td className="px-6 py-5 text-right">
-                  <div className="flex justify-end gap-2 opacity-0 transition-opacity group-hover:opacity-100">
+                  <div className="flex justify-end gap-2 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
                     <button className="rounded-lg p-2 text-on-surface-variant transition-all hover:bg-white hover:text-primary">
                       <span className="material-symbols-outlined text-lg">edit</span>
                     </button>
