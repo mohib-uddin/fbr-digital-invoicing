@@ -26,3 +26,36 @@ body {
 .align-middle {
   vertical-align: middle;
 }
+
+@layer components {
+  .invoice-clean label > span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a93a7;
+  }
+
+  .invoice-clean input:not([type='checkbox']),
+  .invoice-clean select,
+  .invoice-clean textarea {
+    font-weight: 500;
+    color: #2f3653;
+  }
+
+  .invoice-clean textarea {
+    padding: 0.95rem 1rem;
+    line-height: 1.5;
+  }
+
+  .invoice-clean input::placeholder,
+  .invoice-clean textarea::placeholder {
+    color: #a3abbb;
+    font-weight: 500;
+  }
+
+  .invoice-clean h2,
+  .invoice-clean h3 {
+    letter-spacing: -0.01em;
+  }
+}

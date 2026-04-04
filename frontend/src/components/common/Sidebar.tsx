@@ -56,10 +56,13 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-auto space-y-1 border-t border-slate-200/50 pt-4">
-        <button className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95">
+        <NavLink
+          className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95"
+          to="/invoices/create"
+        >
           <span className="material-symbols-outlined text-sm">add</span>
           <span className="text-sm">New Invoice</span>
-        </button>
+        </NavLink>
         <a
           className="flex items-center gap-3 rounded-lg px-4 py-3 text-slate-500 transition-colors duration-300 hover:bg-slate-200/50 hover:text-[#030e44]"
           href="#"
