@@ -23,6 +23,8 @@ export class Init1775242889684 implements MigrationInterface {
         await queryRunner.query(`ALTER TABLE "invoices" ADD CONSTRAINT "FK_0b793047e7030ef060eaae8438a" FOREIGN KEY ("companyId") REFERENCES "company"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`);
     }
 
+
+    
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`ALTER TABLE "invoices" DROP CONSTRAINT "FK_0b793047e7030ef060eaae8438a"`);
         await queryRunner.query(`ALTER TABLE "invoices" DROP CONSTRAINT "FK_1df049f8943c6be0c1115541efb"`);
